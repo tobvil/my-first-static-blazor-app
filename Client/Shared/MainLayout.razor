@@ -1,15 +1,110 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+<style type="text/css">
+    body {
+        background: #F1F1F1;
+        margin: 0px;
+        padding: 0pc;
+        font-family: Arial;
+        font-size: 12pt;
+    }
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-    </div>
+    input {
+        border: 1px solid #E5E5E5;
+        outline: none;
+        margin-right: 15px;
+    }
 
-    <div class="content px-4">
-        @Body
-    </div>
-</div>
+    img {
+        margin: 15px;
+    }
+
+    .apper-btn {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 6px 19px;
+        -webkit-transition: border .20s;
+        -moz-transition: border .20s;
+        -o-transition: border .20s;
+        transition: border .20s;
+        -webkit-font-smoothing: antialiased;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .apper-btn:before,
+    .apper-btn:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+
+    .apper-btn:after {
+        clear: both;
+    }
+
+    .apper-btn-blue {
+        border: 1px solid #3079ED !important;
+        background: #4B8DF8;
+        background: -webkit-linear-gradient(top, #4C8FFD, #4787ED);
+        background: -moz-linear-gradient(top, #4C8FFD, #4787ED);
+        background: -ms-linear-gradient(top, #4C8FFD, #4787ED);
+        background: -o-linear-gradient(top, #4C8FFD, #4787ED);
+        color: white;
+    }
+
+    .apper-btn-blue:hover {
+        border: 1px solid #2F5BB7 !important;
+        background: #3F83F1;
+        background: -webkit-linear-gradient(top, #4D90FE, #357AE8);
+        background: -moz-linear-gradient(top, #4D90FE, #357AE8);
+        background: -ms-linear-gradient(top, #4D90FE, #357AE8);
+        background: -o-linear-gradient(top, #4D90FE, #357AE8);
+    }
+
+    .apper-btn {
+        zoom: 1;
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: 0px 0px 3px #249CDC;
+        border: 1px solid #249CDC;
+    }
+
+    .input {
+        padding: 7px 10px;
+        border-radius: 5px;
+        margin-top: 1px;
+        outline: none;
+
+    }
+
+    div#container {
+        margin: 0px auto;
+        position: relative;
+        min-height: 350px;
+        padding-left: 55px;
+        border: 1px solid black;
+        margin-top: 3%;
+        border: 1px solid #E5E5E5;
+        background: #fff;
+    }
+
+    #options {
+        position: relative;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    #string {
+        width: 250px;
+    }
+
+    #length {
+        text-align: center;
+    }
+</style>

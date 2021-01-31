@@ -1,7 +1,20 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div id="container">
+    <div id="options">
+        <form name="string-length" method="GET" action="./">
+            Length: <input type="number" name="len" id="length" min="8" max="256" value="16" maxlength="2" size="5"
+                class="input"> <input type="submit" value="Generate" class="apper-btn apper-btn-blue">
+        </form>
+    </div>
+    <div id="main">
+        <form name="create-token" method="POST" action="./">
+            <input type="text" name="string" id="string" class="input" value="Befn9674NaTCDE5P"> <input type="submit"
+                value="Create Token" class="apper-btn apper-btn-blue">
+            <input type="hidden" name="submit_token"
+                value="71650fb7a0fe05482b64a7291ab5beaae378d62de1d5b722d8ee7d90e3923874">
+        </form>
+    </div>
+</div>
